@@ -1,0 +1,32 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-55-06-517853-2776380fdf4f-35
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-55-06-517984-2776380fdf4f-34
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-55-06-517990-2776380fdf4f-37
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-55-06-518062-2776380fdf4f-36
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [controller_node-1]: process started with pid [38]
+[INFO] [planner_node-1]: process started with pid [40]
+[INFO] [course_demo-1]: process started with pid [39]
+[INFO] [student_mapper-1]: process started with pid [44]
+[INFO] [global_prior-2]: process started with pid [46]
+status: clock_reset_or_pause
+status: waiting_for_map_and_odom
+[global_prior-2] [INFO] [1793087706.916447651] [global_prior]: Loaded 60 known pillars; no missing-pillar geometry loaded
+status: waiting_for_map_goal
+PASS: separate launches, live fused map, no goal and no motion before manual publish
+publisher: beginning loop
+publishing #1: geometry_msgs.msg.PoseStamped(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id='map'), pose=geometry_msgs.msg.Pose(position=geometry_msgs.msg.Point(x=1.475, y=4.375, z=0.0), orientation=geometry_msgs.msg.Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)))
+
+status: no_path
+status: tracking
+status: goal_reached
+PASS: manual ros2 CLI goal reached in 50.17s; no kinematic collision
+publisher: beginning loop
+publishing #1: geometry_msgs.msg.PoseStamped(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id='map'), pose=geometry_msgs.msg.Pose(position=geometry_msgs.msg.Point(x=29.325, y=8.475, z=0.0), orientation=geometry_msgs.msg.Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)))
+
+status: no_path
+status: tracking
+status: waiting_for_fresh_path
+PASS: independent planner shutdown causes controller stale-path stop while map/odom remain live

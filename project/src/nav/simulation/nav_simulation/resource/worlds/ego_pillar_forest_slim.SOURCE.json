@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "map_id": "ego_pillar_forest_slim",
+  "geometry_version": "slim-v1",
+  "upstream_repository": "https://github.com/ZJU-FAST-Lab/ego-planner",
+  "upstream_commit": "bfda51284c8c1b476043255a8145ef925a3778a5",
+  "parent_simulation_commit": "be08c0c76a79f23c708b0ed384855d8088959c60",
+  "parent_map_id": "ego_pillar_forest",
+  "parent_layout_filename": "ego_pillar_forest.json",
+  "parent_layout_sha256": "6441e6b57153108154a580adc4c434e6a5c1341d93e0db075b054d799481f797",
+  "layout_filename": "ego_pillar_forest_slim.json",
+  "layout_sha256": "22dcdea80c33045987c32a7e4b7880e9578f9d0b1cf3172137f6b96e578754bc",
+  "generator": "nav_simulation/nav_simulation/forest.py::generate_slim_layout",
+  "layout_seed": 20261022,
+  "pillar_count": 120,
+  "diameter_scale": 0.85,
+  "radius_scale": 0.85,
+  "resampled_centers": false,
+  "unchanged": "Every ordered pillar x/y/height, layout seed, field bounds, ground and boundary wall generation are unchanged. Only radius/diameter is multiplied by 0.85.",
+  "collision_visual_consistency": "populate() uses the same radius and height for the solid collision cylinder and visual cylinder.",
+  "scope": "New named simulator geometry and offline reference. Old map/build/report sources remain unchanged. No guarantee of online RogMap connectivity or navigation success.",
+  "planning_input": "Simulated lidar -> global cloud and sensor odometry -> the same RogMap; this JSON/reference is never sent to a planner."
+}

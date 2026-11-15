@@ -1,0 +1,96 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Metric grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 60
+      Reference Frame: map
+    - Class: rviz_default_plugins/Map
+      Name: Global prior (60 pillars)
+      Enabled: true
+      Alpha: 0.5
+      Topic:
+        Value: /nav/map/prior
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/Map
+      Name: Navigation map (fused)
+      Enabled: true
+      Alpha: 0.7
+      Topic:
+        Value: /nav/map
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/Map
+      Name: Local inflated map
+      Enabled: false
+      Alpha: 0.8
+      Topic:
+        Value: /nav/map/local
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/PointCloud2
+      Name: LiDAR points
+      Enabled: true
+      Topic:
+        Value: /nav/cloud
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+      Style: Points
+      Size (Pixels): 2
+      Color Transformer: AxisColor
+      Axis: Z
+    - Class: rviz_default_plugins/Path
+      Name: Planned path
+      Enabled: true
+      Topic:
+        Value: /nav/planning/path
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Color: 60; 220; 90
+      Line Style: Lines
+      Line Width: 0.05
+    - Class: rviz_default_plugins/Odometry
+      Name: Robot pose
+      Enabled: true
+      Topic:
+        Value: /nav/odom
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+      Keep: 1
+      Shape: Arrow
+      Color: 255; 70; 40
+      Shaft Length: 0.5
+      Shaft Radius: 0.06
+      Head Length: 0.2
+      Head Radius: 0.12
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: false
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /nav/goal
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Target Frame: map
+      Scale: 22
+      X: 15
+      Y: 8
+Window Geometry:
+  Width: 1280
+  Height: 800

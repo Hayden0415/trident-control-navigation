@@ -1,0 +1,15 @@
+[WARN] [1793612818.051689712] [kdl_parser]: The root link chassis has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[INFO] [1793612818.052224087] [robot_state_publisher]: got segment camera_link
+[INFO] [1793612818.052251254] [robot_state_publisher]: got segment chassis
+[INFO] [1793612818.052254671] [robot_state_publisher]: got segment front_left_hanging
+[INFO] [1793612818.052257212] [robot_state_publisher]: got segment front_left_wheel
+[INFO] [1793612818.052259546] [robot_state_publisher]: got segment front_right_hanging
+[INFO] [1793612818.052261837] [robot_state_publisher]: got segment front_right_wheel
+[INFO] [1793612818.052263962] [robot_state_publisher]: got segment gimbal_pitch
+[INFO] [1793612818.052265921] [robot_state_publisher]: got segment lidar_link
+[INFO] [1793612818.052268004] [robot_state_publisher]: got segment rear_left_hanging
+[INFO] [1793612818.052270087] [robot_state_publisher]: got segment rear_left_wheel
+[INFO] [1793612818.052272171] [robot_state_publisher]: got segment rear_right_hanging
+[INFO] [1793612818.052274171] [robot_state_publisher]: got segment rear_right_wheel
+[INFO] [1793612818.052276212] [robot_state_publisher]: got segment yaw_link
+[INFO] [1793612913.047342132] [rclcpp]: signal_handler(SIGINT/SIGTERM)

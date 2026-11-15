@@ -1,0 +1,10 @@
+[INFO] [launch]: All log files can be found below /submission/ros-logs/2026-11-02-09-46-57-842492-2435393ab622-35
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [planner_node-1]: process started with pid [39]
+[INFO] [controller_node-2]: process started with pid [43]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [controller_node-2]: sending signal 'SIGINT' to process[controller_node-2]
+[INFO] [planner_node-1]: process has finished cleanly [pid 39]
+[INFO] [controller_node-2]: process has finished cleanly [pid 43]
+[planner_node-1] [INFO] [1793612913.047367924] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[controller_node-2] [INFO] [1793612913.047559341] [rclcpp]: signal_handler(SIGINT/SIGTERM)

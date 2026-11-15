@@ -1,0 +1,5 @@
+legacy_controller:
+  ros__parameters:
+    input_timeout: 1.0
+    max_speed: 0.65
+    max_acceleration: 1.0

@@ -1,0 +1,8 @@
+navigation: waiting_for_map_and_odom
+navigation: waiting_for_map_goal
+navigation: tracking
+navigation: goal_reached
+navigation: tracking
+navigation: stale_input
+PASS: SUPPLIED NAVIGATION ONLY (student work bypassed); arrival=20.80s error=0.1791m; no collision; max_speed=0.6500m/s; stale-input stop
+[INFO] [1793068112.507769960] [rclcpp]: signal_handler(SIGINT/SIGTERM)

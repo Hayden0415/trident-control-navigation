@@ -1,0 +1,151 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+___________ test_projection_height_boundaries_origin_and_duplicates ____________
+
+    def test_projection_height_boundaries_origin_and_duplicates():
+        p = np.array([[-1.9, -0.9, 0.2], [-1.1, -0.1, 1.0], [0.1, 1.1, 0.6],
+                      [0.1, 1.1, 0.6], [-2.01, 0, 0.5], [3.0, 0, 0.5], [0, 3.0, 0.5],
+                      [1, 1, 0.19], [1, 1, 1.01], [np.nan, 0, 0.5], [0, np.inf, 0.5],
+                      [0, 0, np.nan]])
+>       g = project_cloud(p, spec())
+
+src/trident_course/tests/test_student_map.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = array([[-1.9 , -0.9 ,  0.2 ],
+       [-1.1 , -0.1 ,  1.  ],
+       [ 0.1 ,  1.1 ,  0.6 ],
+       [ 0.1 ,  1.1 ,  0.6 ]...      [ 1.  ,  1.  ,  1.01],
+       [  nan,  0.  ,  0.5 ],
+       [ 0.  ,   inf,  0.5 ],
+       [ 0.  ,  0.  ,   nan]])
+spec = GridSpec(resolution=1.0, width=5, height=4, origin_x=-2.0, origin_y=-1.0, z_min=0.2, z_max=1.0, inflation_radius=0.3)
+
+    def project_cloud(points: np.ndarray, spec: GridSpec) -> np.ndarray:
+        """TODO A：N×3 米制世界点云 -> (height,width) uint8，值为 0 或 100。
+    
+        过滤非有限坐标，保留 z_min <= z <= z_max。
+        左下角原点，floor 索引；地图上、右边界不包含；越界忽略。
+        同一列只要存在一个有效点，对应单元即为 100，其他为 0。
+        每帧是完整地图快照，不累积历史、不做衰减或射线遮挡推理。
+        """
+>       raise NotImplementedError('TODO A: implement 3D to 2D projection')
+E       NotImplementedError: TODO A: implement 3D to 2D projection
+
+install/trident_course/local/lib/python3.10/dist-packages/trident_course/student_map.py:36: NotImplementedError
+______________________ test_empty_snapshot_and_no_history ______________________
+
+    def test_empty_snapshot_and_no_history():
+        s = spec()
+>       project_cloud(np.array([[0, 0, 0.5]]), s)
+
+src/trident_course/tests/test_student_map.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = array([[0. , 0. , 0.5]])
+spec = GridSpec(resolution=1.0, width=5, height=4, origin_x=-2.0, origin_y=-1.0, z_min=0.2, z_max=1.0, inflation_radius=0.3)
+
+    def project_cloud(points: np.ndarray, spec: GridSpec) -> np.ndarray:
+        """TODO A：N×3 米制世界点云 -> (height,width) uint8，值为 0 或 100。
+    
+        过滤非有限坐标，保留 z_min <= z <= z_max。
+        左下角原点，floor 索引；地图上、右边界不包含；越界忽略。
+        同一列只要存在一个有效点，对应单元即为 100，其他为 0。
+        每帧是完整地图快照，不累积历史、不做衰减或射线遮挡推理。
+        """
+>       raise NotImplementedError('TODO A: implement 3D to 2D projection')
+E       NotImplementedError: TODO A: implement 3D to 2D projection
+
+install/trident_course/local/lib/python3.10/dist-packages/trident_course/student_map.py:36: NotImplementedError
+________________ test_disk_inflation_no_cascade_and_no_mutation ________________
+
+    def test_disk_inflation_no_cascade_and_no_mutation():
+        s = spec(inflation_radius=1.0)
+        raw = np.zeros((4, 5), dtype=np.uint8)
+        raw[1, 2] = 100
+        saved = raw.copy()
+>       g = inflate_grid(raw, s)
+
+src/trident_course/tests/test_student_map.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+occupied = array([[  0,   0,   0,   0,   0],
+       [  0,   0, 100,   0,   0],
+       [  0,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0]], dtype=uint8)
+spec = GridSpec(resolution=1.0, width=5, height=4, origin_x=-2.0, origin_y=-1.0, z_min=0.2, z_max=1.0, inflation_radius=1.0)
+
+    def inflate_grid(occupied: np.ndarray, spec: GridSpec) -> np.ndarray:
+        """TODO B：返回独立副本，不修改输入，shape/dtype/二值编码不变。
+    
+        对每个原始占据格，标记中心距离 <= inflation_radius (+1e-9 米容差)
+        的其他格为 100，使用欧氏圆盘，边界截断；radius=0 保持输入。
+        禁止一边写输出一边把新增占据格当作膨胀种子，否则会连锁填满。
+        """
+>       raise NotImplementedError('TODO B: implement disk inflation')
+E       NotImplementedError: TODO B: implement disk inflation
+
+install/trident_course/local/lib/python3.10/dist-packages/trident_course/student_map.py:46: NotImplementedError
+______________________ test_corner_and_fractional_radius _______________________
+
+    def test_corner_and_fractional_radius():
+        raw = np.zeros((4, 5), dtype=np.uint8)
+        raw[0, 0] = 100
+>       g = inflate_grid(raw, spec(inflation_radius=1.42))
+
+src/trident_course/tests/test_student_map.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+occupied = array([[100,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0]], dtype=uint8)
+spec = GridSpec(resolution=1.0, width=5, height=4, origin_x=-2.0, origin_y=-1.0, z_min=0.2, z_max=1.0, inflation_radius=1.42)
+
+    def inflate_grid(occupied: np.ndarray, spec: GridSpec) -> np.ndarray:
+        """TODO B：返回独立副本，不修改输入，shape/dtype/二值编码不变。
+    
+        对每个原始占据格，标记中心距离 <= inflation_radius (+1e-9 米容差)
+        的其他格为 100，使用欧氏圆盘，边界截断；radius=0 保持输入。
+        禁止一边写输出一边把新增占据格当作膨胀种子，否则会连锁填满。
+        """
+>       raise NotImplementedError('TODO B: implement disk inflation')
+E       NotImplementedError: TODO B: implement disk inflation
+
+install/trident_course/local/lib/python3.10/dist-packages/trident_course/student_map.py:46: NotImplementedError
+______________________ test_non_square_and_multiple_seeds ______________________
+
+    def test_non_square_and_multiple_seeds():
+        raw = np.zeros((4, 5), dtype=np.uint8)
+        raw[0, 0] = raw[3, 4] = 100
+        expected = raw.copy()
+        expected[0, 1] = expected[1, 0] = expected[2, 4] = expected[3, 3] = 100
+>       np.testing.assert_array_equal(inflate_grid(raw, spec(inflation_radius=1)), expected)
+
+src/trident_course/tests/test_student_map.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+occupied = array([[100,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0],
+       [  0,   0,   0,   0,   0],
+       [  0,   0,   0,   0, 100]], dtype=uint8)
+spec = GridSpec(resolution=1.0, width=5, height=4, origin_x=-2.0, origin_y=-1.0, z_min=0.2, z_max=1.0, inflation_radius=1)
+
+    def inflate_grid(occupied: np.ndarray, spec: GridSpec) -> np.ndarray:
+        """TODO B：返回独立副本，不修改输入，shape/dtype/二值编码不变。
+    
+        对每个原始占据格，标记中心距离 <= inflation_radius (+1e-9 米容差)
+        的其他格为 100，使用欧氏圆盘，边界截断；radius=0 保持输入。
+        禁止一边写输出一边把新增占据格当作膨胀种子，否则会连锁填满。
+        """
+>       raise NotImplementedError('TODO B: implement disk inflation')
+E       NotImplementedError: TODO B: implement disk inflation
+
+install/trident_course/local/lib/python3.10/dist-packages/trident_course/student_map.py:46: NotImplementedError
+=========================== short test summary info ============================
+FAILED src/trident_course/tests/test_student_map.py::test_projection_height_boundaries_origin_and_duplicates
+FAILED src/trident_course/tests/test_student_map.py::test_empty_snapshot_and_no_history
+FAILED src/trident_course/tests/test_student_map.py::test_disk_inflation_no_cascade_and_no_mutation
+FAILED src/trident_course/tests/test_student_map.py::test_corner_and_fractional_radius
+FAILED src/trident_course/tests/test_student_map.py::test_non_square_and_multiple_seeds
+5 failed in 0.06s

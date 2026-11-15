@@ -1,0 +1,41 @@
+schema_version: 1
+# Teaching delivery is one Git repository with the same component slots as the framework.
+components:
+  localization:
+    path: nav/localization
+    packages: []
+    simulation_provider: nav_simulation
+    interface: /nav/odom
+  obstacle-map:
+    path: nav/obstacle-map
+    packages: [nav_obstacle_map]
+    interface: [/nav/cloud, /nav/map/local, /nav/map/prior, /nav/map]
+  planning:
+    path: nav/planning
+    packages: [nav_planning]
+    interface: /nav/planning/path
+  strategy:
+    path: nav/strategy
+    packages: []
+    manual_provider: ros2 topic pub
+    interface: /nav/goal
+  on-board-communication:
+    path: nav/on-board-communication
+    packages: []
+    simulation_provider: nav_simulation
+    interface: /nav/cmd_vel
+  lidar-driver:
+    path: nav/lidar-driver
+    packages: []
+    simulation_provider: nav_simulation
+    interface: /nav/cloud
+  simulation:
+    path: nav/simulation
+    packages: [nav_simulation]
+auxiliary:
+  control:
+    path: nav/control
+    packages: [nav_legacy_control]
+  bringup:
+    path: nav_bringup
+    packages: [nav_bringup]

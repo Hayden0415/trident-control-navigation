@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "student_id": "3036698786",
+  "created_utc": "2026-11-02T09:45:47.292985+00:00",
+  "run_id": "20261102T094547Z-ef7ad2",
+  "git_commit": "ef9cc5c46478162a579eff816d415dd4b574b3cd",
+  "git_status": "M report.md\n M src/nav/obstacle-map/nav_obstacle_map/python/nav_obstacle_map/student_map.py",
+  "built_current_source": true,
+  "checks": [
+    {
+      "name": "student_map",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "live_map",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "closed_loop",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "recording": "X11 desktop, native Gazebo and RViz side by side; no audio",
+  "image_id": "sha256:29361c3c0b9b14430d278945ed8b0094e02f2671be462ecd539247f2b0037ea1",
+  "windows": {
+    "gazebo_window": 56623122,
+    "rviz_window": 50331667,
+    "desktop_size": [
+      1024,
+      768
+    ]
+  },
+  "recorder_exit_code": 0,
+  "video": {
+    "duration_s": 94.833333,
+    "width": 1920,
+    "height": 1440,
+    "codec": "h264",
+    "full_decode_passed": true
+  },
+  "case": {
+    "schema_version": 1,
+    "outcome": "goal_reached",
+    "goal": [
+      1.475,
+      4.375
+    ],
+    "timeout_sim_s": 180.0,
+    "full_field_goal": true,
+    "start_position": [
+      29.32499998563206,
+      8.47499851339594,
+      0.33264990204471173
+    ],
+    "elapsed_sim_s": 58.585,
+    "elapsed_wall_s": 87.03163229202619,
+    "final_error_m": 0.16248196536307266,
+    "counts": {
+      "odom": 5766,
+      "cloud": 222,
+      "map": 224,
+      "local": 222,
+      "prior": 306,
+      "path": 452
+    },
+    "final_state": {
+      "position": [
+        1.595439398981314,
+        4.48406301041722,
+        0.3326497040542354
+      ],
+      "collision": false,
+      "contact": {
+        "schema_version": 1,
+        "source": "gazebo_contact_event_sensor",
+        "observation_mode": "event_absence_with_source_health",
+        "healthy": true,
+        "configured": true,
+        "source_topic": "/world/default/model/sentry/link/chassis/sensor/benchmark_contact/contact",
+        "source_discovered": true,
+        "source_discovery_age_wall_s": 1.8701587920077145,
+        "ros_bridge_publishers": 1,
+        "odom_age_wall_s": 0.00024874997325241566,
+        "sim_progress_age_wall_s": 0.00024874997325241566,
+        "raw_messages_received": 0,
+        "raw_nonempty_messages_received": 0,
+        "last_raw_age_wall_s": null,
+        "last_raw_sim_s": null,
+        "collision_latched": false,
+        "negative_observation_kind": "healthy_event_source_absence",
+        "stamp_sim_s": 61.2,
+        "discovery_error": null
+      },
+      "path_points": 2,
+      "status": "goal_reached"
+    },
+    "contact_observation_healthy": true,
+    "passed": true
+  }
+}

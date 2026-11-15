@@ -1,0 +1,6 @@
+1793612817.8516889 [INFO] [launch]: All log files can be found below /submission/ros-logs/2026-11-02-09-46-57-847247-2435393ab622-36
+1793612817.8517513 [INFO] [launch]: Default logging verbosity is set to INFO
+1793612817.8833170 [INFO] [rviz2-1]: process started with pid [38]
+1793612913.1147840 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1793612913.3029439 [INFO] [rviz2-1]: sending signal 'SIGINT' to process[rviz2-1]
+1793612913.3597481 [ERROR] [rviz2-1]: process has died [pid 38, exit code -2, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /opt/nav_ws/install/nav_bringup/share/nav_bringup/config/course.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_4pzio9k5'].

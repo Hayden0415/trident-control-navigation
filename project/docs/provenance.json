@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/trident-rm/2027-navi-demo",
+  "commit": "a0ffc16786ca5225022219fbb1f53fb952a5acdb",
+  "files": {
+    "projects/hku-astar-ros1/sim_nav/src/bot_sim/src/dstarlite.cpp": "d048a8a7d1adb87f0e478a7a53599ff090c9f5eada4cb6d8551d88d2b1c71f8f",
+    "projects/hku-astar-ros1/sim_nav/src/bot_sim/include/bot_sim/velocity_pid_controller.hpp": "7b60442fb31ee2a2bd976b81f6f5cc534bcd6dd79aa6b6ce6bdf95f08bab700f"
+  }
+}

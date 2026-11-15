@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "outcome": "goal_reached",
+  "goal": [
+    1.475,
+    4.375
+  ],
+  "timeout_sim_s": 180.0,
+  "full_field_goal": true,
+  "start_position": [
+    29.32499998563206,
+    8.47499851339594,
+    0.33264990204471173
+  ],
+  "elapsed_sim_s": 58.585,
+  "elapsed_wall_s": 87.03163229202619,
+  "final_error_m": 0.16248196536307266,
+  "counts": {
+    "odom": 5766,
+    "cloud": 222,
+    "map": 224,
+    "local": 222,
+    "prior": 306,
+    "path": 452
+  },
+  "final_state": {
+    "position": [
+      1.595439398981314,
+      4.48406301041722,
+      0.3326497040542354
+    ],
+    "collision": false,
+    "contact": {
+      "schema_version": 1,
+      "source": "gazebo_contact_event_sensor",
+      "observation_mode": "event_absence_with_source_health",
+      "healthy": true,
+      "configured": true,
+      "source_topic": "/world/default/model/sentry/link/chassis/sensor/benchmark_contact/contact",
+      "source_discovered": true,
+      "source_discovery_age_wall_s": 1.8701587920077145,
+      "ros_bridge_publishers": 1,
+      "odom_age_wall_s": 0.00024874997325241566,
+      "sim_progress_age_wall_s": 0.00024874997325241566,
+      "raw_messages_received": 0,
+      "raw_nonempty_messages_received": 0,
+      "last_raw_age_wall_s": null,
+      "last_raw_sim_s": null,
+      "collision_latched": false,
+      "negative_observation_kind": "healthy_event_source_absence",
+      "stamp_sim_s": 61.2,
+      "discovery_error": null
+    },
+    "path_points": 2,
+    "status": "goal_reached"
+  },
+  "contact_observation_healthy": true,
+  "passed": true
+}

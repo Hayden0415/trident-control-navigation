@@ -1,0 +1,8 @@
+[INFO] [1793612819.133800171] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (ignition.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[INFO] [1793612819.138778254] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sentry/odometry (ignition.msgs.Odometry) -> /nav/sim/odom_raw (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1793612819.142512671] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/nav/sim/cmd_vel (geometry_msgs/msg/Twist) -> /sentry/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[INFO] [1793612819.144514671] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/sentry/link/yaw_link/sensor/lidar_sensor/scan/points (ignition.msgs.PointCloudPacked) -> /nav/sim/cloud_raw (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[INFO] [1793612819.146731504] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/sentry/joint_state (ignition.msgs.Model) -> /sentry/joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[INFO] [1793612819.148705504] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/sentry/link/chassis/sensor/benchmark_contact/contact (ignition.msgs.Contacts) -> /nav/sim/contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1793612819.170787088] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[INFO] [1793612913.048469924] [rclcpp]: signal_handler(SIGINT/SIGTERM)

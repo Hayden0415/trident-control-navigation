@@ -1,0 +1,11 @@
+[INFO] [launch]: All log files can be found below /submission/ros-logs/2026-11-02-09-46-57-850422-2435393ab622-34
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [student_mapper-1]: process started with pid [40]
+[INFO] [global_prior-2]: process started with pid [45]
+[global_prior-2] [INFO] [1793612818.253987462] [global_prior]: Loaded 60 known pillars; navigating on prior only until the first valid local map
+[global_prior-2] [INFO] [1793612822.353718506] [global_prior]: Local map received; navigation now uses prior plus live local obstacles
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [global_prior-2]: sending signal 'SIGINT' to process[global_prior-2]
+[INFO] [student_mapper-1]: sending signal 'SIGINT' to process[student_mapper-1]
+[INFO] [global_prior-2]: process has finished cleanly [pid 45]
+[INFO] [student_mapper-1]: process has finished cleanly [pid 40]

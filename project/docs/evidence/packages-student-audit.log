@@ -1,0 +1,12 @@
+nav_bringup
+nav_legacy_control
+nav_obstacle_map
+nav_planning
+nav_simulation
+nav_planning planner_node
+nav_legacy_control controller_node
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/opt/nav_ws/install/nav_obstacle_map/local/lib/python3.10/dist-packages/nav_obstacle_map/student_map.py", line 37, in project_cloud
+    raise NotImplementedError('TODO A: implement 3D to 2D projection')
+NotImplementedError: TODO A: implement 3D to 2D projection

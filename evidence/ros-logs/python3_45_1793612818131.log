@@ -1,0 +1,2 @@
+[INFO] [1793612818.253987462] [global_prior]: Loaded 60 known pillars; navigating on prior only until the first valid local map
+[INFO] [1793612822.353718506] [global_prior]: Local map received; navigation now uses prior plus live local obstacles

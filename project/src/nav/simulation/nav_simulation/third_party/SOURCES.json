@@ -1,0 +1,27 @@
+{
+  "upstream": "trident-rm/Omni_sim",
+  "upstream_commit": "2c64cee25776b361714ac8af5011acf3d39e2b56",
+  "source_workspace": "nav_simulation/rmoss_gazebo/rmoss_gz_resources",
+  "files": {
+    "third_party/OmniDrive.cc": "c1bb63c33c2437e2ffa32854ca47fe1b30216d2b43ece459243de5152bb9b440",
+    "third_party/OmniDrive.hh": "f425f2adc0626e48e808de951a2952912e23656ac84dcb6d1243296713a337dc",
+    "resource/models/sentry/robot.urdf.xacro": "ade0baf36641d99b1cf5460787af07d7e13e53a9e64a3ef6b71b183700fd070d",
+    "resource/models/sentry/meshes/part_001_NAUO1.stl": "98c810a95f8b703068aa2199badefb0ab394e1542dd467a3809c96e009ce23a9",
+    "resource/models/sentry/meshes/part_002_NAUO2.stl": "83f9d76f422d01dfbff41cf174586b07c620d2dbf857aa53719ccd399d21d4cd",
+    "resource/models/sentry/meshes/part_003_NAUO3.stl": "15ec7ae05de52ab579a853b6fddcff89bd4c191e6d29e3c89b002489902b4aeb",
+    "resource/models/sentry/meshes/part_004_NAUO4.stl": "7734213d0c097d9070b6c628ae0eed590fe5071c79887d37bf88f3d2db5f7ec0",
+    "resource/models/sentry/meshes/part_005_NAUO5.stl": "0a8649761af3a83165543517dbac3f2b540774a69257105fce7ec6c8ecbf9a2d",
+    "resource/models/sentry/meshes/part_006_NAUO6.stl": "756d8a587533f408f3c1bdd9e294473a63efafc8e9690beb132a7eea969f8d79",
+    "resource/models/sentry/meshes/part_007_NAUO7.stl": "a6d83e3827e77308e04a3d687e6b732d198249adb260cb62a901072865ead90a",
+    "resource/models/sentry/meshes/part_008_NAUO8.stl": "275eb8be1d53d22467fc75454f1f5107c9761425f9284f33ce3e967c4a1aca35",
+    "resource/models/sentry/meshes/part_009_NAUO9.stl": "86be19b4a3b90a66875848166ac49fdca8dc5768ac50e90cd48ec30d33ebc7b1",
+    "resource/models/sentry/meshes/part_010_NAUO10.stl": "5e5a89f111376321597ce1d3314b9a013046b10ad5581944b7237e794cfb9a37",
+    "resource/models/sentry/meshes/part_011_NAUO11.stl": "1966cd2464d3bb6e16a49de8efe62ba66ae1db8e8043e37b626bd150b18f13d3",
+    "resource/models/sentry/meshes/part_012_NAUO12.stl": "b70aa8704c472890c7acbbd7adb7c08a0ea0c27ecc616a51858bffd8338e2297",
+    "resource/models/sentry/meshes/part_013_NAUO13.stl": "ee02347ce3740b209c36ab7699bf4f2c4024c573c339cc50a76040bf268e21ab",
+    "resource/models/sentry/meshes/part_014_NAUO14.stl": "908286c2ba1aeca76fe7922b6c92a8d921c2dcc32c1d05f83976b181d15ad2e6",
+    "resource/models/sentry/meshes/part_015_NAUO15.stl": "1444bf7925ba67569bb8329008109ea49768d7518b98045cd8219c3edf309ccf",
+    "resource/models/sentry/meshes/part_016_surface_shells_001.stl": "a0a967140574f017b9b7bdb2fbc973f1782d0417e25659e7add410291933fbc8",
+    "resource/models/sentry/plugin.urdf.xacro": "88a7e54329cd3c7d180c1b35f8d8ad4bbc7a2c51a062401de6452b78d2fb2343"
+  }
+}

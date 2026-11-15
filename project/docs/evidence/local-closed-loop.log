@@ -1,0 +1,11 @@
+navigation: clock_reset_or_pause
+navigation: waiting_for_map_and_odom
+navigation: waiting_for_map_goal
+navigation: tracking
+navigation: start_or_goal_occupied
+navigation: tracking
+navigation: goal_reached
+navigation: tracking
+navigation: stale_input
+PASS: STUDENT CLOSED LOOP; arrival=21.32s error=0.1725m; no collision; max_speed=0.6500m/s; stale-input stop
+[INFO] [1793084742.586231374] [rclcpp]: signal_handler(SIGINT/SIGTERM)

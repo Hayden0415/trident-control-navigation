@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+<name>nav_planning</name><version>0.2.0</version>
+<description>Trident course nav_planning component.</description>
+<maintainer email="maintainers@trident-rm.invalid">Trident RM</maintainer>
+<license>LicenseRef-Trident-Internal</license>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>rclcpp</depend>
+<depend>std_msgs</depend>
+<depend>nav_msgs</depend>
+<depend>geometry_msgs</depend>
+<depend>launch_ros</depend>
+<export><build_type>ament_cmake</build_type></export>
+</package>

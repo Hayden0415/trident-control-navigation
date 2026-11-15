@@ -1,0 +1,51 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-43-28-300509-3caa14a66381-33
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-43-28-300523-3caa14a66381-35
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-07-43-28-300546-3caa14a66381-34
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [legacy_navigation-1]: process started with pid [36]
+[INFO] [course_demo-1]: process started with pid [37]
+[INFO] [student_mapper-1]: process started with pid [40]
+[INFO] [global_prior-2]: process started with pid [42]
+status: clock_reset_or_pause
+status: waiting_for_map_and_odom
+[global_prior-2] [INFO] [1793087008.452928889] [global_prior]: Loaded 60 known pillars; no missing-pillar geometry loaded
+status: waiting_for_map_goal
+PASS: separate launches, live fused map, no goal and no motion before manual publish
+publisher: beginning loop
+publishing #1: geometry_msgs.msg.PoseStamped(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id='map'), pose=geometry_msgs.msg.Pose(position=geometry_msgs.msg.Point(x=1.475, y=4.375, z=0.0), orientation=geometry_msgs.msg.Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)))
+
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: clock_reset_or_pause
+status: tracking
+status: goal_reached
+PASS: manual ros2 CLI goal reached in 60.45s; no kinematic collision

@@ -1,0 +1,78 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  58.37MB
+Step 1/16 : ARG BASE_IMAGE=ros:humble-ros-base
+Step 2/16 : FROM ${BASE_IMAGE}
+ ---> d9bcf2e6f72d
+Step 3/16 : USER root
+ ---> Using cache
+ ---> 98d086e29b5f
+Step 4/16 : SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+ ---> Using cache
+ ---> 3db1883fbb14
+Step 5/16 : RUN apt-get update && apt-get install -y --no-install-recommends curl gnupg ca-certificates     && curl -fsSL https://packages.osrfoundation.org/gazebo.gpg | gpg --batch --yes --dearmor -o /usr/share/keyrings/course-gazebo.gpg     && echo "deb [signed-by=/usr/share/keyrings/course-gazebo.gpg] https://packages.osrfoundation.org/gazebo/ubuntu-stable jammy main" > /etc/apt/sources.list.d/course-gazebo.list
+ ---> Using cache
+ ---> 8f8740128596
+Step 6/16 : RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends     build-essential cmake python3-colcon-common-extensions python3-numpy python3-pytest     ros-humble-ament-cmake-python ros-humble-rclcpp ros-humble-rclpy     ros-humble-nav-msgs ros-humble-geometry-msgs ros-humble-std-msgs     ros-humble-sensor-msgs ros-humble-sensor-msgs-py ros-humble-launch-ros     ignition-fortress libignition-gazebo6-dev ros-humble-ros-gz-bridge     ros-humble-robot-state-publisher ros-humble-xacro ros-humble-tf2-ros-py     ros-humble-rviz2 libgl1-mesa-dri libglx-mesa0     && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 9ef4ea7135f4
+Step 7/16 : WORKDIR /opt/nav_ws
+ ---> Using cache
+ ---> 072840c8943e
+Step 8/16 : COPY src /opt/nav_ws/src
+ ---> Using cache
+ ---> ede073e0e2e1
+Step 9/16 : RUN source /opt/ros/humble/setup.bash && colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release     && ctest --test-dir build/nav_planning --output-on-failure     && ctest --test-dir build/nav_legacy_control --output-on-failure
+ ---> Running in 79c80752294c
+Starting >>> nav_legacy_control
+Starting >>> nav_obstacle_map
+Finished <<< nav_obstacle_map [0.42s]
+Starting >>> nav_planning
+Finished <<< nav_planning [7.87s]
+Starting >>> nav_simulation
+Finished <<< nav_legacy_control [8.85s]
+Finished <<< nav_simulation [4.54s]
+Starting >>> nav_bringup
+Finished <<< nav_bringup [0.24s]
+
+Summary: 5 packages finished [13.2s]
+Internal ctest changing into directory: /opt/nav_ws/build/nav_planning
+Test project /opt/nav_ws/build/nav_planning
+    Start 1: legacy_dstar_math
+1/1 Test #1: legacy_dstar_math ................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec
+Internal ctest changing into directory: /opt/nav_ws/build/nav_legacy_control
+Test project /opt/nav_ws/build/nav_legacy_control
+    Start 1: legacy_pid_math
+1/1 Test #1: legacy_pid_math ..................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+ ---> Removed intermediate container 79c80752294c
+ ---> b5f8c86f2b21
+Step 10/16 : COPY scripts /opt/nav_ws/scripts
+ ---> cacea3df7df9
+Step 11/16 : COPY config /opt/nav_ws/course-docs/config
+ ---> 181c4bd317ee
+Step 12/16 : COPY README.md /opt/nav_ws/course-docs/README.md
+ ---> 6296d0c2120a
+Step 13/16 : COPY docs /opt/nav_ws/course-docs/docs
+ ---> 9db77321b554
+Step 14/16 : COPY docker-entrypoint.sh /course-entrypoint.sh
+ ---> 65d6b1c5f28d
+Step 15/16 : ENTRYPOINT ["/course-entrypoint.sh"]
+ ---> Running in e7c5a277cc42
+ ---> Removed intermediate container e7c5a277cc42
+ ---> 74d9f31e4073
+Step 16/16 : CMD ["ros2", "launch", "nav_bringup", "course.launch.py"]
+ ---> Running in 34aca38fb98d
+ ---> Removed intermediate container 34aca38fb98d
+ ---> 29361c3c0b9b
+Successfully built 29361c3c0b9b
+Successfully tagged trident-control-course:submit-20261102t094547z-ef7ad2

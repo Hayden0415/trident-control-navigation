@@ -1,0 +1,23 @@
+1793612817.7259998 [INFO] [launch]: All log files can be found below /submission/ros-logs/2026-11-02-09-46-57-725564-2435393ab622-33
+1793612817.7260690 [INFO] [launch]: Default logging verbosity is set to INFO
+1793612817.9525659 [INFO] [ign-1]: process started with pid [83]
+1793612817.9526603 [INFO] [parameter_bridge-2]: process started with pid [85]
+1793612817.9526927 [INFO] [robot_state_publisher-3]: process started with pid [87]
+1793612817.9527173 [INFO] [static_transform_publisher-4]: process started with pid [89]
+1793612817.9527390 [INFO] [sim_adapter-5]: process started with pid [92]
+1793612818.0527415 [static_transform_publisher-4] [INFO] [1793612818.046010546] [static_transform_publisher_3ok6LupIEulqNi75]: Spinning until stopped - publishing transform
+1793612818.0528307 [static_transform_publisher-4] translation: ('0.000000', '0.000000', '0.000000')
+1793612818.0528553 [static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+1793612818.0528727 [static_transform_publisher-4] from 'sentry/chassis' to 'base_link'
+1793612913.0985706 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1793612913.2964315 [INFO] [sim_adapter-5]: sending signal 'SIGINT' to process[sim_adapter-5]
+1793612913.3214862 [INFO] [static_transform_publisher-4]: sending signal 'SIGINT' to process[static_transform_publisher-4]
+1793612913.3291712 [INFO] [robot_state_publisher-3]: sending signal 'SIGINT' to process[robot_state_publisher-3]
+1793612913.3327491 [ERROR] [sim_adapter-5]: process has died [pid 92, exit code -2, cmd '/opt/nav_ws/install/nav_simulation/lib/nav_simulation/sim_adapter --ros-args --params-file /tmp/launch_params_5eb_xgpm'].
+1793612913.3438413 [INFO] [parameter_bridge-2]: sending signal 'SIGINT' to process[parameter_bridge-2]
+1793612913.3452761 [INFO] [robot_state_publisher-3]: process has finished cleanly [pid 87]
+1793612913.3467369 [INFO] [ign-1]: sending signal 'SIGINT' to process[ign-1]
+1793612913.3633580 [ERROR] [static_transform_publisher-4]: process has died [pid 89, exit code 255, cmd '/opt/ros/humble/lib/tf2_ros/static_transform_publisher --frame-id sentry/chassis --child-frame-id base_link --ros-args --params-file /tmp/launch_params_151af3lp'].
+1793612913.3637555 [INFO] [parameter_bridge-2]: process has finished cleanly [pid 85]
+1793612913.3646805 [static_transform_publisher-4] [INFO] [1793612913.048503091] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+1793612917.5782685 [ERROR] [ign-1]: process has died [pid 83, exit code 1, cmd 'ign gazebo -v 3 -r --gui-config /tmp/course-gazebo-9ncfhbtx/gui.config /tmp/course-gazebo-9ncfhbtx/ego_pillar_forest_slim_benchmark.sdf'].

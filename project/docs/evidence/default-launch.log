@@ -1,0 +1,14 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-27-02-28-08-232596-8f40fa5f02f5-23
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [legacy_navigation-1]: process started with pid [24]
+[INFO] [student_mapper-2]: process started with pid [26]
+[INFO] [course_demo-3]: process started with pid [28]
+[student_mapper-2] [ERROR] [1793068088.679119479] [student_mapper]: TODO A: implement 3D to 2D projection
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [course_demo-3]: sending signal 'SIGINT' to process[course_demo-3]
+[INFO] [student_mapper-2]: sending signal 'SIGINT' to process[student_mapper-2]
+[INFO] [legacy_navigation-1]: sending signal 'SIGINT' to process[legacy_navigation-1]
+[legacy_navigation-1] [INFO] [1793068094.096386007] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [legacy_navigation-1]: process has finished cleanly [pid 24]
+[INFO] [course_demo-3]: process has finished cleanly [pid 28]
+[INFO] [student_mapper-2]: process has finished cleanly [pid 26]

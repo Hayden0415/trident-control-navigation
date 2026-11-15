@@ -1,0 +1,9 @@
+1793612817.8508151 [INFO] [launch]: All log files can be found below /submission/ros-logs/2026-11-02-09-46-57-850422-2435393ab622-34
+1793612817.8508809 [INFO] [launch]: Default logging verbosity is set to INFO
+1793612817.8840327 [INFO] [student_mapper-1]: process started with pid [40]
+1793612817.8841021 [INFO] [global_prior-2]: process started with pid [45]
+1793612913.0631840 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1793612913.1665285 [INFO] [global_prior-2]: sending signal 'SIGINT' to process[global_prior-2]
+1793612913.1801074 [INFO] [student_mapper-1]: sending signal 'SIGINT' to process[student_mapper-1]
+1793612913.7834094 [INFO] [global_prior-2]: process has finished cleanly [pid 45]
+1793612913.7864320 [INFO] [student_mapper-1]: process has finished cleanly [pid 40]
